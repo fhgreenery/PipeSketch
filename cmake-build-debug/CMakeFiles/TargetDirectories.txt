@@ -1,0 +1,3 @@
+D:/projects/pipe_version/0715_newpcap/cmake-build-debug/CMakeFiles/0715_newpcap.dir
+D:/projects/pipe_version/0715_newpcap/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/projects/pipe_version/0715_newpcap/cmake-build-debug/CMakeFiles/rebuild_cache.dir

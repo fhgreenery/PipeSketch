@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="0715_newpcap"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/projects/pipe_version/0715_newpcap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="0715_newpcap">
+				<Option output="D:/projects/pipe_version/0715_newpcap/cmake-build-debug/0715_newpcap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/pipe_version/0715_newpcap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/."/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/elastic"/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/MVSketch"/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/MVSketch2"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 0715_newpcap"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="0715_newpcap/fast">
+				<Option output="D:/projects/pipe_version/0715_newpcap/cmake-build-debug/0715_newpcap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/pipe_version/0715_newpcap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/."/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/elastic"/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/MVSketch"/>
+					<Add directory="D:/projects/pipe_version/0715_newpcap/MVSketch2"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 0715_newpcap/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/projects/pipe_version/0715_newpcap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/projects/pipe_version/0715_newpcap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\pipe_version\0715_newpcap\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/.idea/.gitignore">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/.idea/0715_newpcap.iml">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/.idea/modules.xml">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/.idea/workspace.xml">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/BOBHash32.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/CM/cm_heap.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/CM/cmsketch.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/CU/cu_heap.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/CU/cusketch.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/EMFSD.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/LinearCounting.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/Makefile">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/README.md">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/adaptor.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/adaptor.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/datatypes.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/hash.c">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/hash.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/heavy_changer.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/iptraces.txt">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_changer">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_changer.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_hitter">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_hitter.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_simd">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/main_simd.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/mvsketch.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/mvsketch.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/mvsketch_simd.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/mvsketch_simd.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/p4/README.md">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/p4/mv_104.p4">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/p4/mv_32.p4">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/p4/send.py">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch/util.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch2/heavy_changer.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch2/main_hitter.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch2/mvsketch.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/MVSketch2/mvsketch.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/adaptor.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/adaptor.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/cardinality">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/cardinality.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/cuckoo_hashing.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/datatypes.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/BOBHash32.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/EMFSD.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/ElasticSketch.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/HeavyPart-noSIMD.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/LightPart.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/README.md">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/elastic">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/elastic.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/elastic/param.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/flowsize">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/flowsize.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/hash.c">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/hash.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/heavy_changer.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/heavyhitter">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/heavyhitter.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/iptraces.txt">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/main_changer">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/main_changer.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/params.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/pipesketch.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/pipesketch.hpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/results/0711_results.xls">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/results/img/pipesketch structure.jpg">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/test.cpp">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/util.h">
+			<Option target="0715_newpcap"/>
+		</Unit>
+		<Unit filename="D:/projects/pipe_version/0715_newpcap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
