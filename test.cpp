@@ -17,8 +17,8 @@ int main(){
 
 
 
-// std::cout<<"query result:"<<pipe_est<<"true size:"<<it->second<<std::endl;
-// std::cout<<"err:"<<pipe_err<<std::endl;
+// std::cout<<"query result:"<<tree_est<<"true size:"<<it->second<<std::endl;
+// std::cout<<"err:"<<tree_err<<std::endl;
  /*
 std::cout<<"1:"<<std::bitset<8>(key.key[3])<<" "<<std::bitset<8>(key.key[2])<<" "<<std::bitset<8>(key.key[1])<<" "<<std::bitset<8>(key.key[0])<<std::endl;
 std::cout<<"2:"<<std::bitset<8>(key.key[7])<<" "<<std::bitset<8>(key.key[6])<<" "<<std::bitset<8>(key.key[5])<<" "<<std::bitset<8>(key.key[4])<<std::endl;
@@ -33,7 +33,7 @@ std::cout<<"5:"<<std::bitset<8>(key.key[12])<<std::endl;
         val_tp hh_threshold = thresh*totalSize;
         
         std::vector<std::pair<key_tp, val_tp> > hh_results;
-        pipe->getHeavyHitter(hh_threshold, hh_results);
+        tree->getHeavyHitter(hh_threshold, hh_results);
         //统计AAE ARE precision recall
         double hh_precision = 0, hh_recall=0, hh_error=0, hh_throughput=0;//detectime=0;
         int hh_tp = 0, hh_cnt = 0;;
@@ -67,14 +67,14 @@ std::cout<<"5:"<<std::bitset<8>(key.key[12])<<std::endl;
         
        
         //cardinality
-        uint32_t card = pipe->getCardinality();
+        uint32_t card = tree->getCardinality();
         std::cout<<"card:"<<card<<std::endl;
         std::cout<<"true card:"<<ground.size()<<std::endl;
         
         //flow size distribution
         vector<double> dist;
         std::cout<<"get distribution."<<std::endl;
-        pipe->get_distribution(dist);
+        tree->get_distribution(dist);
         std::cout<<"finish get distribution."<<std::endl;
         for(int i = 0, j = 0; i < (int)dist.size(); ++i){
             std::cout<<"flow size distribution:"<<i<<" "<<dist[i]<<std::endl;

@@ -1,8 +1,8 @@
 #ifndef CHANGER_H
 #define CHANGER_H
 
-#include "pipesketch.hpp"
-#include "pipesketch.cpp"
+#include "treesketch.hpp"
+#include "treesketch.cpp"
 #include "datatypes.hpp"
 #include <cmath>
 template <class S>
@@ -74,7 +74,7 @@ void HeavyChanger<S>::query(val_tp thresh, myvector& result) {
         change = std::abs((int)(old_value-new_value));
 
         if (change > thresh) {
-            // std::cout<<"pipe heavy changer:"<<change<<std::endl;
+            // std::cout<<"tree heavy changer:"<<change<<std::endl;
             key_tp key;
             memcpy(key.key, it->key, 13);
             std::pair<key_tp, val_tp> cand;

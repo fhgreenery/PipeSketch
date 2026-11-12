@@ -1,11 +1,11 @@
-#ifndef PIPESKETCH_H
-#define PIPESKETCH_H
+#ifndef TREESKETCH_H
+#define TREESKETCH_H
 #include<bitset>
-#include "pipesketch.hpp"
+#include "treesketch.hpp"
 #include "EMFSD.h"
 const int keylen = 13;//key bytes
 
-PipeSketch::PipeSketch(int lgwidth,int rgwidth,int hvwidth){ 
+TreeSketch::TreeSketch(int lgwidth,int rgwidth,int hvwidth){ 
 
 	lg.lgwidth = lgwidth;
     rg.rgwidth = rgwidth;
@@ -30,7 +30,7 @@ PipeSketch::PipeSketch(int lgwidth,int rgwidth,int hvwidth){
 	
 }
 
-PipeSketch::~PipeSketch(){ //使用起来
+TreeSketch::~TreeSketch(){ //使用起来
     //对应delete
 	for (int i = 0; i < lg.lgdepth; i++) {
         delete lg.light_table[i];
@@ -43,7 +43,7 @@ PipeSketch::~PipeSketch(){ //使用起来
     delete hv.heavy_table;
     
 }
-void PipeSketch::reset(){
+void TreeSketch::reset(){
 
     for (int i = 0; i < lg.lgdepth; i++) {
         for (int j = 0; j < lg.lgwidth; j++){
@@ -63,7 +63,7 @@ void PipeSketch::reset(){
         memset(hv.heavy_table[i].key, 0, keylen);
     }
 }
-void PipeSketch::getHeavyHitter(val_tp thresh, myvector& results){
+void TreeSketch::getHeavyHitter(val_tp thresh, myvector& results){
 
     //只在heavy_table中找 
     for(int i=0; i<hv.hvwidth; i++){
@@ -80,7 +80,7 @@ void PipeSketch::getHeavyHitter(val_tp thresh, myvector& results){
     }
 }
 
-uint32_t PipeSketch::getCardinality() {
+uint32_t TreeSketch::getCardinality() {
     
     uint32_t card =0;
 
@@ -99,7 +99,7 @@ uint32_t PipeSketch::getCardinality() {
     return uint32_t(card/4);
 }
 
-void PipeSketch::get_entropy(double &entropy){
+void TreeSketch::get_entropy(double &entropy){
     double entr ;
     vector<double> dist;
     get_distribution(dist);
@@ -110,7 +110,7 @@ void PipeSketch::get_entropy(double &entropy){
     entropy = log(m)-(1/m)*entr;
 }
 
-void PipeSketch::get_distribution(vector<double> &dist){   
+void TreeSketch::get_distribution(vector<double> &dist){   
     EMFSD *em_fsd_algo = NULL;
     int counter_num = lg.lgwidth;
     uint32_t tmp_counters[counter_num];
@@ -135,7 +135,7 @@ void PipeSketch::get_distribution(vector<double> &dist){
 
 }
 
-void PipeSketch::insertLight(unsigned char* key, int32_t pkt_size, uint16_t minlg){
+void TreeSketch::insertLight(unsigned char* key, int32_t pkt_size, uint16_t minlg){
 	// int index = 0;
 	for(int i=0; i<lg.lgdepth; i++){ 
         int index = MurmurHash64A(key, keylen, lg.lgseed[i])% lg.lgwidth;
@@ -147,7 +147,7 @@ void PipeSketch::insertLight(unsigned char* key, int32_t pkt_size, uint16_t minl
 	}
 }
 
-void PipeSketch::insertRegular(unsigned char* key, int32_t pkt_size){ //又是无符号整数的原因
+void TreeSketch::insertRegular(unsigned char* key, int32_t pkt_size){ //又是无符号整数的原因
 
 	uint32_t minrg = queryRegular(key);
 	// int index=0;
@@ -161,9 +161,9 @@ void PipeSketch::insertRegular(unsigned char* key, int32_t pkt_size){ //又是�
 	}
 }
 
-void PipeSketch::insertHeavy(unsigned char* key, int32_t pkt_size){
+void TreeSketch::insertHeavy(unsigned char* key, int32_t pkt_size){
 	int index = MurmurHash64A(key, keylen, hv.hvseed) % hv.hvwidth;
-    PipeSketch::HBucket *hvb = &hv.heavy_table[index]; //地址不变，但内容在变
+    TreeSketch::HBucket *hvb = &hv.heavy_table[index]; //地址不变，但内容在变
         if (hvb->key[0] == '\0') { //key为空
             memcpy(hvb->key, key, keylen);
             hvb->hv_bsize += pkt_size;
@@ -197,7 +197,7 @@ void PipeSketch::insertHeavy(unsigned char* key, int32_t pkt_size){
 
 }
 
-void PipeSketch::insert(unsigned char* key, int32_t pkt_size){
+void TreeSketch::insert(unsigned char* key, int32_t pkt_size){
 	uint16_t minlg = queryLight(key);
     if(minlg <= 64035){//65535-1500
 		insertLight(key,pkt_size,minlg);
@@ -206,7 +206,7 @@ void PipeSketch::insert(unsigned char* key, int32_t pkt_size){
 	}
 }
 
-uint32_t PipeSketch::queryLight(unsigned char* key){
+uint32_t TreeSketch::queryLight(unsigned char* key){
 	// int index=0;
 	uint32_t lg_est = 4294967295; //2^31-1
 	for(int i=0; i<lg.lgdepth; i++){
@@ -220,7 +220,7 @@ uint32_t PipeSketch::queryLight(unsigned char* key){
 
 }
 
-uint32_t PipeSketch::queryRegular(unsigned char* key){
+uint32_t TreeSketch::queryRegular(unsigned char* key){
 	// int index=0;
 	uint32_t rg_est = 4294967295; 
 	for(int i=0; i<rg.rgdepth; i++){
@@ -233,7 +233,7 @@ uint32_t PipeSketch::queryRegular(unsigned char* key){
 	
 }
 
-uint32_t PipeSketch::queryHeavy(unsigned char* key){
+uint32_t TreeSketch::queryHeavy(unsigned char* key){
     int index = MurmurHash64A(key, keylen, hv.hvseed) % hv.hvwidth;
 	if(memcmp(key, hv.heavy_table[index].key, keylen) == 0){
 		return hv.heavy_table[index].hv_bsize;
@@ -245,7 +245,7 @@ uint32_t PipeSketch::queryHeavy(unsigned char* key){
 }
 
 //
-uint32_t PipeSketch::query(unsigned char* key){
+uint32_t TreeSketch::query(unsigned char* key){
 
 	uint16_t min_lg = queryLight(key);
 	if(min_lg <= 64035){

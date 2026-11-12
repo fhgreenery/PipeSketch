@@ -1,5 +1,5 @@
-#ifndef PIPE_H
-#define PIPE_H
+#ifndef TREESKETCH_HPP
+#define TREESKETCH_HPP
 #include <unordered_set>
 #include <utility>
 #include <cstring>
@@ -16,7 +16,7 @@ extern "C"
 #include "util.h"
 }
 
-class PipeSketch {
+class TreeSketch {
 
     typedef struct LBUCKET_type {
         uint16_t lg_bsize;
@@ -54,9 +54,9 @@ class PipeSketch {
 
  
     public:
-        PipeSketch(int lgwidth,int rgwidth,int hvwidth);
+        TreeSketch(int lgwidth,int rgwidth,int hvwidth);
 
-        ~PipeSketch();
+        ~TreeSketch();
 
         void reset();
 

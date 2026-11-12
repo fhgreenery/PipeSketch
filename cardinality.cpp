@@ -6,8 +6,8 @@
 #include "datatypes.hpp"
 #include "adaptor.cpp"
 #include "adaptor.hpp"
-#include "pipesketch.cpp"
-#include "pipesketch.hpp"
+#include "treesketch.cpp"
+#include "treesketch.hpp"
 #include <bitset>
 #include <cmath>
 #include "CM/cmsketch.cpp"
@@ -68,20 +68,20 @@ int main(int argc, char* argv[]){
             }
         }
 
-        PipeSketch* pipe = new PipeSketch(lgwidth,rgwidth,hvwidth);
+        TreeSketch* tree = new TreeSketch(lgwidth,rgwidth,hvwidth);
         CMSketch* cm = new CMSketch(cmwidth);
         LinearCounting* lc = new LinearCounting(cmwidth*4);
         // CUSketch* cu = new CUSketch(cuwidth);
         adaptor->Reset();
         memset(&t, 0, sizeof(tuple_t));
         while(adaptor->GetNext(&t) == 1){
-            pipe->insert((unsigned char*)&(t.key),t.size);
+            tree->insert((unsigned char*)&(t.key),t.size);
             cm->insert((unsigned char*)&(t.key),t.size); 
             lc->insert((unsigned char*)&(t.key),t.size);
             // cu->insert((unsigned char*)&(t.key),t.size);  
         }
        
-        uint32_t card = pipe->getCardinality();
+        uint32_t card = tree->getCardinality();
         uint32_t cm_card = cm->getCardinality();
         uint32_t lc_card = lc->getCardinality();
         std::cout<<"card:"<<card<<std::endl;
@@ -89,7 +89,7 @@ int main(int argc, char* argv[]){
         std::cout<<"lc_card:"<<lc_card<<std::endl;
         std::cout<<"true card:"<<ground.size()<<std::endl;
 
-        delete pipe; 
+        delete tree; 
         // delete cm;
         // delete cu;
         delete adaptor;
