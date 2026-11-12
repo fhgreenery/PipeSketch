@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     //Heavy hitter threshold
     double thresh = 0.0008;
 
-    //pipe sketch parameters
+    //tree sketch parameters
     //设置参数
     int lgwidth = 8000;
     int lgdepth = 4;
@@ -49,8 +49,8 @@ int main(int argc, char* argv[]) {
     memset(&t, 0, sizeof(tuple_t));
     val_tp diffsum = 0;
 
-    //PipeSketch
-    HeavyChanger<PipeSketch>* heavychanger = new HeavyChanger<PipeSketch>(lgwidth,lgdepth,rgwidth,rgdepth,hvwidth,hvdepth);//模板类的使用
+    //TreeSketch
+    HeavyChanger<TreeSketch>* heavychanger = new HeavyChanger<TreeSketch>(lgwidth,lgdepth,rgwidth,rgdepth,hvwidth,hvdepth);//模板类的使用
     for (std::string file; getline(tracefiles, file);) {
         //load traces and get ground
 
@@ -112,7 +112,7 @@ int main(int argc, char* argv[]) {
         uint64_t t1, t2;
         adaptor->Reset();
         heavychanger->Reset();
-        PipeSketch* cursk = (PipeSketch*)heavychanger->GetCurSketch();
+        TreeSketch* cursk = (TreeSketch*)heavychanger->GetCurSketch();
         t1 = now_us();
         while(adaptor->GetNext(&t) == 1) {
             cursk->insert((unsigned char*)&(t.key),t.size);

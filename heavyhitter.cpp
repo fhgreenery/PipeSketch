@@ -6,8 +6,8 @@
 #include "datatypes.hpp"
 #include "adaptor.cpp"
 #include "adaptor.hpp"
-#include "pipesketch.cpp"
-#include "pipesketch.hpp"
+#include "treesketch.cpp"
+#include "treesketch.hpp"
 #include <bitset>
 #include <cmath>
 #include <unordered_map>
@@ -75,13 +75,13 @@ int main(int argc, char* argv[]){
             }
         }
         //heavy hitter
-        PipeSketch* pipe = new PipeSketch(lgwidth,rgwidth,hvwidth);
+        TreeSketch* tree = new TreeSketch(lgwidth,rgwidth,hvwidth);
         CMH* cm = new CMH(cmwidth);
         MVSketch* mv = new MVSketch(4, mvwidth, 13*8);
         adaptor->Reset();
         memset(&t, 0, sizeof(tuple_t));
         while(adaptor->GetNext(&t) == 1){
-            pipe->insert((unsigned char*)&(t.key),t.size);
+            tree->insert((unsigned char*)&(t.key),t.size);
             cm->insert((unsigned char*)&(t.key),t.size);
             mv->Update((unsigned char*)&(t.key), t.size);
         }
@@ -89,7 +89,7 @@ int main(int argc, char* argv[]){
         val_tp hh_threshold = thresh*totalSize;
         
         std::vector<std::pair<key_tp, val_tp> > hh_results;
-        pipe->getHeavyHitter(hh_threshold, hh_results);
+        tree->getHeavyHitter(hh_threshold, hh_results);
 
         std::vector< std::pair<key_tp, val_tp> > heavy_hitters;
         cm->get_heavy_hitters(hh_threshold,heavy_hitters);
@@ -159,7 +159,7 @@ int main(int argc, char* argv[]){
         std::cout<<"mv_precision:"<<mv_precision<<std::endl;
         std::cout<<"mv_recall:"<<mv_recall<<std::endl;
 
-        delete pipe; 
+        delete tree; 
         // delete cm;
         // delete cu;
         delete adaptor;

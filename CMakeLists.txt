@@ -8,5 +8,5 @@ include_directories(elastic)
 include_directories(MVSketch)
 include_directories(MVSketch2)
 
-add_executable(0715_newpcap pipesketch.cpp}
+add_executable(0715_newpcap treesketch.cpp)
 
